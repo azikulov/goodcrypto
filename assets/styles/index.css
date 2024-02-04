@@ -178,7 +178,8 @@ button {
 }
 
 .form {
-  background: #010b13;
+  /* background: #010b13; */
+  background: #021626;
   padding: 2rem 1rem 1rem 1rem;
   width: 100%;
   max-width: 40rem;
@@ -199,7 +200,7 @@ button {
 }
 
 .form__submit {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   background: #01ef67;
   color: #fff;
   text-transform: uppercase;

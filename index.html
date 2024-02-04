@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoodCrypto</title>
     <link rel="stylesheet" href="./assets/styles/index.css" />
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('#form');
+        const actions = document.querySelector('#actions');
+        const submit = document.querySelector('#submit');
+
+        submit.addEventListener('click', () => {
+          form.style.display = 'none';
+          actions.style.display = 'block';
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -44,38 +57,39 @@
           </h1>
 
           <form method="post" action="#" class="form">
-            <p class="form__title">Congrats, you are on the waitlist!</p>
+            <div id="actions">
+              <p class="form__title">Congrats, you are on the waitlist!</p>
 
-            <p style="margin-top: 2rem" class="form__text">
-              WHAT NOW? <br />
-              Invite your friends and complete the actions below to move up the
-              waitlist.
-            </p>
+              <p style="margin-top: 2rem" class="form__text">
+                WHAT NOW? <br />
+                Invite your friends and complete the actions below to move up
+                the waitlist.
+              </p>
 
-            <p style="margin-top: 0.75rem" class="form__text">
-              Move higher with each new friend you refer!
-            </p>
+              <p style="margin-top: 0.75rem" class="form__text">
+                Move higher with each new friend you refer!
+              </p>
 
-            <p style="margin-top: 0.75rem" class="form__text">
-              Don't forget to verify your email - we've sent you the link.
-              Invite your friends +
-            </p>
+              <p style="margin-top: 0.75rem" class="form__text">
+                Don't forget to verify your email - we've sent you the link.
+                Invite your friends +
+              </p>
 
-            <div class="form__actions">
-              <a href="#" class="form__button">
-                <svg
-                  version="1.0"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512.000000 512.000000"
-                  preserveAspectRatio="xMidYMid meet"
-                >
-                  <g
-                    transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-                    fill="#000000"
-                    stroke="none"
+              <div class="form__actions">
+                <a href="#" class="form__button">
+                  <svg
+                    version="1.0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512.000000 512.000000"
+                    preserveAspectRatio="xMidYMid meet"
                   >
-                    <path
-                      d="M3409 4506 c-126 -35 -252 -140 -306 -254 l-27 -58 -415 -168 c-229
+                    <g
+                      transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                      fill="#000000"
+                      stroke="none"
+                    >
+                      <path
+                        d="M3409 4506 c-126 -35 -252 -140 -306 -254 l-27 -58 -415 -168 c-229
 -93 -603 -245 -831 -338 l-414 -168 -442 0 c-492 0 -528 -4 -657 -72 -81 -43
 -202 -164 -245 -245 -62 -118 -72 -184 -72 -478 0 -144 5 -288 11 -321 5 -32
 31 -101 56 -153 35 -74 59 -108 112 -160 114 -112 240 -166 413 -178 l98 -6 0
@@ -92,148 +106,153 @@ m-1756 1111 l0 -485 -377 3 c-372 3 -379 3 -425 26 -67 33 -123 94 -148 160
 -20 52 -21 72 -18 316 l3 261 27 52 c32 61 101 120 160 138 32 10 133 14 411
 14 l367 1 0 -486z m0 -1239 c0 -347 -3 -442 -14 -468 -44 -105 -180 -116 -243
 -20 -17 25 -18 63 -21 475 l-3 448 141 0 140 0 0 -435z"
-                    />
-                    <path
-                      d="M4687 3760 c-16 -5 -116 -59 -223 -121 -207 -120 -228 -139 -239
+                      />
+                      <path
+                        d="M4687 3760 c-16 -5 -116 -59 -223 -121 -207 -120 -228 -139 -239
 -214 -7 -48 24 -117 67 -148 42 -31 116 -34 169 -7 122 63 357 204 381 230 53
 57 56 142 7 204 -37 47 -109 72 -162 56z"
-                    />
-                    <path
-                      d="M4484 2871 c-95 -58 -107 -180 -25 -254 51 -46 76 -49 336 -45 238 3
+                      />
+                      <path
+                        d="M4484 2871 c-95 -58 -107 -180 -25 -254 51 -46 76 -49 336 -45 238 3
 260 9 303 84 42 73 19 159 -58 212 -32 21 -40 22 -279 22 -225 0 -249 -2 -277
 -19z"
-                    />
-                    <path
-                      d="M4313 2200 c-44 -22 -75 -64 -87 -113 -9 -40 11 -106 42 -137 40 -39
+                      />
+                      <path
+                        d="M4313 2200 c-44 -22 -75 -64 -87 -113 -9 -40 11 -106 42 -137 40 -39
 395 -240 436 -247 23 -4 53 1 81 11 100 39 133 171 62 250 -12 14 -109 75
 -216 137 -218 125 -248 134 -318 99z"
+                      />
+                    </g>
+                  </svg>
+
+                  <p>Invite your friends</p>
+
+                  <span>+5 each</span>
+                </a>
+
+                <a href="#" class="form__button">
+                  <svg
+                    fill="#FFFFFF"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 50 50"
+                  >
+                    <path
+                      d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z"
                     />
-                  </g>
-                </svg>
+                  </svg>
 
-                <p>Invite your friends</p>
+                  <p>Follow us on X</p>
 
-                <span>+5 each</span>
-              </a>
+                  <span>+1</span>
+                </a>
 
-              <a href="#" class="form__button">
-                <svg
-                  fill="#FFFFFF"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 50 50"
-                >
-                  <path
-                    d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z"
-                  />
-                </svg>
+                <a href="#" class="form__button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 48 48"
+                  >
+                    <path
+                      fill="#29b6f6"
+                      d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"
+                    ></path>
+                    <path
+                      fill="#fff"
+                      d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"
+                    ></path>
+                    <path
+                      fill="#b0bec5"
+                      d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"
+                    ></path>
+                    <path
+                      fill="#cfd8dc"
+                      d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"
+                    ></path>
+                  </svg>
 
-                <p>Follow us on X</p>
+                  <p>Join us on Telegram</p>
 
-                <span>+1</span>
-              </a>
+                  <span>+1</span>
+                </a>
 
-              <a href="#" class="form__button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 48 48"
-                >
-                  <path
-                    fill="#29b6f6"
-                    d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"
-                  ></path>
-                  <path
-                    fill="#fff"
-                    d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"
-                  ></path>
-                  <path
-                    fill="#b0bec5"
-                    d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"
-                  ></path>
-                  <path
-                    fill="#cfd8dc"
-                    d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"
-                  ></path>
-                </svg>
+                <a href="#" class="form__button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 48 48"
+                  >
+                    <path
+                      fill="#FF3D00"
+                      d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"
+                    ></path>
+                    <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+                  </svg>
 
-                <p>Join us on Telegram</p>
+                  <p>Subscribe to our YouTube</p>
 
-                <span>+1</span>
-              </a>
+                  <span>+1</span>
+                </a>
 
-              <a href="#" class="form__button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 48 48"
-                >
-                  <path
-                    fill="#FF3D00"
-                    d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"
-                  ></path>
-                  <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
-                </svg>
+                <a href="#" class="form__button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 48 48"
+                  >
+                    <path
+                      fill="#FF3D00"
+                      d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"
+                    ></path>
+                    <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+                  </svg>
 
-                <p>Subscribe to our YouTube</p>
+                  <p>Watch platform's first demo</p>
 
-                <span>+1</span>
-              </a>
+                  <span>+1</span>
+                </a>
 
-              <a href="#" class="form__button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 48 48"
-                >
-                  <path
-                    fill="#FF3D00"
-                    d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"
-                  ></path>
-                  <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
-                </svg>
+                <a href="#" class="form__button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 48 48"
+                  >
+                    <path
+                      fill="#29b6f6"
+                      d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"
+                    ></path>
+                    <path
+                      fill="#fff"
+                      d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"
+                    ></path>
+                    <path
+                      fill="#b0bec5"
+                      d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"
+                    ></path>
+                    <path
+                      fill="#cfd8dc"
+                      d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"
+                    ></path>
+                  </svg>
 
-                <p>Watch platform's first demo</p>
+                  <p>Join Telegram Announcements channel</p>
 
-                <span>+1</span>
-              </a>
-
-              <a href="#" class="form__button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 48 48"
-                >
-                  <path
-                    fill="#29b6f6"
-                    d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"
-                  ></path>
-                  <path
-                    fill="#fff"
-                    d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"
-                  ></path>
-                  <path
-                    fill="#b0bec5"
-                    d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"
-                  ></path>
-                  <path
-                    fill="#cfd8dc"
-                    d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"
-                  ></path>
-                </svg>
-
-                <p>Join Telegram Announcements channel</p>
-
-                <span>+1</span>
-              </a>
+                  <span>+1</span>
+                </a>
+              </div>
             </div>
 
-            <!-- <input type="email" placeholder="Email" class="form__field" />
+            <div id="form">
+              <input type="email" placeholder="Email" class="form__field" />
 
-            <button class="form__submit" type="submit">JOIN WHITELIST</button> -->
+              <button id="submit" class="form__submit" type="button">
+                JOIN WHITELIST
+              </button>
+            </div>
 
             <a href="#" class="form__terms">terms & conditions</a>
 

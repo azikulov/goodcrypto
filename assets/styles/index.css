@@ -26,6 +26,14 @@ button {
   cursor: pointer;
 }
 
+#actions {
+  display: none;
+}
+
+#form {
+  width: 100%;
+}
+
 .wrapper {
   display: flex;
   height: 100vh;

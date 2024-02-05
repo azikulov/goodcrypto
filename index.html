@@ -9,10 +9,13 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const form = document.querySelector('#form');
+        const formSubmit = document.querySelector('.form');
         const actions = document.querySelector('#actions');
         const submit = document.querySelector('#submit');
 
-        submit.addEventListener('click', () => {
+        formSubmit.addEventListener('submit', (e) => {
+          e.preventDefault();
+
           form.style.display = 'none';
           actions.style.display = 'block';
         });
@@ -253,16 +256,22 @@ m-1756 1111 l0 -485 -377 3 c-372 3 -379 3 -425 26 -67 33 -123 94 -148 160
             </div>
 
             <div id="form">
-              <input type="email" placeholder="Email" class="form__field" />
+              <input
+                type="email"
+                placeholder="Email"
+                class="form__field"
+                required
+              />
 
               <input
+                required
                 type="text"
                 style="margin-top: 0.5rem"
                 placeholder="Telegram"
                 class="form__field"
               />
 
-              <button id="submit" class="form__submit" type="button">
+              <button id="submit" class="form__submit" type="submit">
                 JOIN WHITELIST
               </button>
             </div>

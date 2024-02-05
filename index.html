@@ -16,6 +16,23 @@
           form.style.display = 'none';
           actions.style.display = 'block';
         });
+
+        const collapse = document.querySelector('#collapse');
+        const collapseItem = document.querySelector('#collapse-item');
+
+        collapse.addEventListener('click', () => {
+          collapseItem.style.display = 'flex';
+        });
+
+        const copy = document.querySelector('#copy');
+        const copyText = document.querySelector('#copy-text');
+
+        copy.addEventListener('click', (event) => {
+          event.target.innerHTML =
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.430123 16.430123 20 12 20 C 7.5698774 20 4 16.430123 4 12 C 4 7.5698774 7.5698774 4 12 4 z M 16.292969 8.2929688 L 10 14.585938 L 7.7070312 12.292969 L 6.2929688 13.707031 L 10 17.414062 L 17.707031 9.7070312 L 16.292969 8.2929688 z"></path></svg>';
+
+          navigator.clipboard.writeText(copyText.value);
+        });
       });
     </script>
   </head>
@@ -76,11 +93,7 @@
               </p>
 
               <div class="form__actions">
-                <a
-                  href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgoodcrypto.app%2F&screen_name=GoodCryptoApp"
-                  target="_blank"
-                  class="form__button"
-                >
+                <button id="collapse" class="form__button" type="button">
                   <svg
                     version="1.0"
                     xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +145,37 @@ m-1756 1111 l0 -485 -377 3 c-372 3 -379 3 -425 26 -67 33 -123 94 -148 160
                   <p>Invite your friends</p>
 
                   <span>+5 each</span>
-                </a>
+
+                  <div id="collapse-item" class="form__button-field">
+                    <input
+                      value="https://goodcrypto.app/x/waitlist?kid=30EG51"
+                      id="copy-text"
+                    />
+
+                    <div id="copy">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 460 460"
+                        xml:space="preserve"
+                      >
+                        <path
+                          d="M425.934,0H171.662c-18.122,0-32.864,14.743-32.864,32.864v77.134h30V32.864c0-1.579,1.285-2.864,2.864-2.864h254.272
+				c1.579,0,2.864,1.285,2.864,2.864v254.272c0,1.58-1.285,2.865-2.864,2.865h-74.729v30h74.729
+				c18.121,0,32.864-14.743,32.864-32.865V32.864C458.797,14.743,444.055,0,425.934,0z"
+                        />
+                        <path
+                          d="M288.339,139.998H34.068c-18.122,0-32.865,14.743-32.865,32.865v254.272C1.204,445.257,15.946,460,34.068,460h254.272
+				c18.122,0,32.865-14.743,32.865-32.864V172.863C321.206,154.741,306.461,139.998,288.339,139.998z M288.341,430H34.068
+				c-1.58,0-2.865-1.285-2.865-2.864V172.863c0-1.58,1.285-2.865,2.865-2.865h254.272c1.58,0,2.865,1.285,2.865,2.865v254.273h0.001
+				C291.206,428.715,289.92,430,288.341,430z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </button>
 
                 <a
                   href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgoodcrypto.app%2F&screen_name=GoodCryptoApp"

@@ -58,6 +58,38 @@ button {
 @media (max-width: 768px) {
   .section-main {
     padding-block: 4rem;
+    background-image: none;
+    background-color: #000;
+  }
+}
+/* 
+.section-main__image-top {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .section-main__image-top {
+    display: block;
+  }
+
+  .section-main__image-top img {
+    width: 100%;
+    height: 100%;
+  }
+} */
+
+.section-main__image-bottom {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .section-main__image-bottom {
+    display: block;
+  }
+
+  .section-main__image-bottom img {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -76,6 +108,13 @@ button {
     font-weight: 900;
     line-height: 59px;
     text-align: center;
+
+    background-image: url(../images/circle.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
+    width: 100%;
   }
 }
 

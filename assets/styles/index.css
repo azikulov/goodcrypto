@@ -74,6 +74,60 @@ button {
   aspect-ratio: 1440 / 832;
 }
 
+.section-main::before {
+  content: ' ';
+  background-image: url('../images/circle-big.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 1/1;
+
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  width: 42rem;
+  height: 42rem;
+
+  -webkit-animation: rotating 10s linear infinite;
+  -moz-animation: rotating 10s linear infinite;
+  -ms-animation: rotating 10s linear infinite;
+  -o-animation: rotating 10s linear infinite;
+  animation: rotating 10s linear infinite;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.section-main__circle {
+  display: none;
+}
+
 /* 
 .section-main__image-top {
   display: none;
@@ -100,6 +154,9 @@ button {
   font-weight: 900;
   line-height: 93px;
   letter-spacing: 0%;
+
+  position: relative;
+  z-index: 999;
 }
 
 .section-main__title span {
@@ -118,6 +175,8 @@ button {
 
 .section-main__form {
   margin-top: 1.5rem;
+  z-index: 999;
+  position: relative;
 }
 
 .form {
@@ -423,6 +482,10 @@ button {
     aspect-ratio: auto;
   }
 
+  .section-main::before {
+    display: none;
+  }
+
   .section-main__image-bottom {
     display: block;
   }
@@ -438,12 +501,26 @@ button {
     font-weight: 900;
     line-height: 59px;
     text-align: center;
+    display: inline-block;
+  }
 
-    background-image: url(../images/circle.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 20rem;
+  .section-main__circle {
+    position: absolute;
+    display: block;
+    top: -25%;
+    left: -20%;
+    /* transform: translateX(-50%); */
+    width: calc(100% + 10rem);
+
+    -webkit-animation: rotating 10s linear infinite;
+    -moz-animation: rotating 10s linear infinite;
+    -ms-animation: rotating 10s linear infinite;
+    -o-animation: rotating 10s linear infinite;
+    animation: rotating 10s linear infinite;
+  }
+
+  .section-main__circle img {
+    height: 100%;
     width: 100%;
   }
 
@@ -464,6 +541,7 @@ button {
 
   .form {
     padding: 1.25rem 1rem;
+    margin-top: 8rem;
   }
 
   .section-waitlist {

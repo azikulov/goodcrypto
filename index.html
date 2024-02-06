@@ -36,6 +36,12 @@
 
           navigator.clipboard.writeText(copyText.value);
         });
+
+        const count = document.querySelector('.form__info-content > span');
+
+        setInterval(() => {
+          count.innerHTML = Number(count.innerHTML) + 1;
+        }, 300000);
       });
     </script>
   </head>
@@ -247,7 +253,7 @@ m-1756 1111 l0 -485 -377 3 c-372 3 -379 3 -425 26 -67 33 -123 94 -148 160
 
           <div class="form__info">
             <p class="form__info-content">0 position</p>
-            <p class="form__info-content">0 on the waitlist</p>
+            <p class="form__info-content"><span>0</span> on the waitlist</p>
           </div>
         </form>
 
